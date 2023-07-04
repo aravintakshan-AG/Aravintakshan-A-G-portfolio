@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aravintakshan A G-Portfolio</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <div id="header">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skill</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="intro">
+                <h1>Hi! I'm <span>ARAVINTAKSHAN A G</span>,<br>An Engineering Student</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="navbar">
+            <div id="row">
+                <div class="col-1">
+                    <img src="img/profil.JPG" >
+                </div>
+                <div class="col-2">
+                    <h1 class="cont"> About Me </h1>
+                    <p>Love to work in a challenging atmosphere where I can learn new things and push myself towards 
+                    best all day and utilize my knowledge and skills to the betterment of the organization.</p>
+                    <div class="titles">
+                        <p class="lin current" onclick="opentab('skills')">Skill</p>
+                        <p class="lin" onclick="opentab('Education')">Education</p>
+                        <p class="lin" onclick="opentab('Pojects')">Pojects</p>
+                        <p class="lin" onclick="opentab('Contact')">Contact</p>
+                    </div>
+                    <div class="tabcont current" id="skills">
+                        <ul>
+                            <li><span>C/C++</span></li>
+                            <li><span>Python</span></li>
+                            <li><span>JAVA</span></li>
+                            <li><span>Blender</span></li>
+                            <li><span>HTML/CSS</span></li>
+                            <li><span>SQL</span></li>
+                        </ul>
+                    </div>
+                    <div class="tabcont" id="Education">
+                        <ul>
+                            <li><span>Velammal Engineering College,chennai</span><br>year:2020-2024<br>CGPA: 8.906</li>
+                            <li><span>VELAMMAL VIDHYASHRAM,chennai</span><br>12th 2019-2020<br>percentage: 85.6</li>
+                            <li><span>VELAMMAL VIDHYASHRAM,chennai</span><br>10th 2017-2018<br>percentage: 75.8</li>
+                        </ul>
+                    </div>
+                    <div class="tabcont" id="Pojects">
+                        <ul>
+                            <li><span>Data transmission using light</span><br>IOT based project.<br>
+                                Wireless data transmission using light.<br>
+                                Which help to attain more transmission rate.<br>
+                                Tools used: arduino.<br>
+                                Apr  2022</li>
+                            <li><span>IEDC project</span><br>Smart glasse.<br>
+                                Electronic product which can be placed in glass and helps to bring a smart phone into a small device applications.<br>
+                                Our Smart glasses are used in navigation, entertainment and education fields.<br>
+                                Dec 2022.<br>
+                                Ongoing project.<br></li>
+                        </ul>
+                    </div>
+                    <div class="tabcont" id="Contact">
+                        <ul>
+                            <li><span>Phone no.</span><br>+917010942955</li>
+                            <li><span>Mail</span><br>aravintakshancse@gmail.com</li>
+                            <li><span>Github</span><br>https://github.com/aravintakshan-AG</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var lin = document.getElementsByClassName("lin");
+        var cont = document.getElementsByClassName("tabcont");
+        function opentab(nam){
+            for(tablin of lin){
+                tablin.classList.remove("current");
+            }
+            for(tabco of cont){
+                tabco.classList.remove("current");
+            }
+            event.currentTarget.classList.add("current");
+            document.getElementById(nam).classList.add("current")
+        }
+    </script>
+</body>
+</html>
